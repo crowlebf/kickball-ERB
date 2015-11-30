@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> <%=team_name%> Homepage</title>
+	<link rel="stylesheet" href="/home.css">
+</head>
+<body>
+<h1>Team Info</h1>
+	<ul>Team name is <%= team_name %>
+		<% Team.players(team_name).each do |player| %>
+			<li> <%= "#{player.position}: #{player.name}" %> </li>
+		<% end %>
+	</ul>
+</body>
+</html>

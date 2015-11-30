@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> <%=position_name%> Homepage</title>
+	<link rel="stylesheet" href="/home.css">
+</head>
+<body>
+<h1>Position Info</h1>
+	<ul>Position name is <%= position_name %>
+		<% teams.each do |player| %>
+			<% if player.position == position_name %>
+				<li> <%= "#{player.team_name}: #{player.name}" %> </li>
+		<% end %>
+		<% end %>
+	</ul>
+</body>
+</html>

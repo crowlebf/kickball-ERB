@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kickball Positions Homepage</title>
+	<link rel="stylesheet" href="/home.css">
+</head>
+<body>
+<h1>List of Positions</h1>
+	<ul>
+			<% team = Team.players("Simpson Slammers")%>
+			<% team.each do |player| %>
+				<li><a href="/positions/<%= player.position %>"><%= player.position %></a></li>
+			<% end %>
+	</ul>
+</body>
+</html>
